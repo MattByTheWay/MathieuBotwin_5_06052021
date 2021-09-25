@@ -18,10 +18,6 @@ function getCookie(name) {
   return null;
 }
 
-
-setCookie('ppkcookie','testcookie',7);
-console.log(getCookie('ppkcookie'));
-
 fetch("http://localhost:3000/api/teddies")
 .then(function(res) {
     if (res.ok) {
@@ -63,12 +59,12 @@ fetch("http://localhost:3000/api/teddies")
       document.getElementById("productBody"+i).appendChild(newDescription);    
       let newButton = document.createElement("button"); 
       newButton.type = "button";
-      newButton.id = value[i]._id; 
+      newButton.id = "buttonid"+i; 
       newButton.classList.add("btn", "btn-primary");
       newButton.textContent = "En savoir plus >";
       document.getElementById("productBody"+i).appendChild(newButton);    
       console.log('Element créer');
-      const buttonClick = document.getElementById(value[i]._id);   
+      const buttonClick = document.getElementById("buttonid"+i);   
       buttonClick.addEventListener('click', function() {  
         setCookie('product_choose',value[i]._id,7);
         // let product_choose=getCookie("product_choose");
@@ -80,5 +76,3 @@ fetch("http://localhost:3000/api/teddies")
   .catch(function(err) {
     console.log(err);
   });
-
-  setCookie('product_choose',value[i]._id,7);
