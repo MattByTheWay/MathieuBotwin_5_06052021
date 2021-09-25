@@ -63,16 +63,16 @@ fetch("http://localhost:3000/api/teddies")
       document.getElementById("productBody"+i).appendChild(newDescription);    
       let newButton = document.createElement("button"); 
       newButton.type = "button";
-      newButton.id = value[i]._id+i; 
+      newButton.id = value[i]._id; 
       newButton.classList.add("btn", "btn-primary");
       newButton.textContent = "En savoir plus >";
       document.getElementById("productBody"+i).appendChild(newButton);    
       console.log('Element créer');
-      const buttonClick = document.getElementById(value[i]._id+i);   
+      const buttonClick = document.getElementById(value[i]._id);   
       buttonClick.addEventListener('click', function() {  
         setCookie('product_choose',value[i]._id,7);
-        let product_choose=getCookie("product_choose");
-        console.log(product_choose);
+        // let product_choose=getCookie("product_choose");
+        // console.log(product_choose);
     });
     
    }
