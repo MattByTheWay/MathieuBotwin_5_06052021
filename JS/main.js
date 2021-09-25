@@ -81,3 +81,4 @@ fetch("http://localhost:3000/api/teddies")
     console.log(err);
   });
 
+  setCookie('product_choose',value[i]._id,7);
