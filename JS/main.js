@@ -67,8 +67,7 @@ fetch("http://localhost:3000/api/teddies")
       const buttonClick = document.getElementById("buttonid"+i);   
       buttonClick.addEventListener('click', function() {  
         setCookie('product_choose',value[i]._id,7);
-        // let product_choose=getCookie("product_choose");
-        // console.log(product_choose);
+        window.location.href = 'product.html';
     });
     
    }
