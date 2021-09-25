@@ -5,7 +5,7 @@ function setCookie(name,value,days) {
       date.setTime(date.getTime() + (days*24*60*60*1000));
       expires = "; expires=" + date.toUTCString();
   }
-  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  document.cookie = name + "=" + value + ";" + expires + ";";
 }
 function getCookie(name) {
   var nameEQ = name + "=";
@@ -20,6 +20,7 @@ function getCookie(name) {
 
 
 setCookie('ppkcookie','testcookie',7);
+console.log(getCookie('ppkcookie'));
 
 fetch("http://localhost:3000/api/teddies")
 .then(function(res) {
@@ -69,7 +70,7 @@ fetch("http://localhost:3000/api/teddies")
       console.log('Element créer');
       const buttonClick = document.getElementById(value[i]._id+i);   
       buttonClick.addEventListener('click', function() {  
-        document.cookie = product_choose=value[i]._id;
+        setCookie('product_choose',value[i]._id,7);
         let product_choose=getCookie("product_choose");
         console.log(product_choose);
     });
