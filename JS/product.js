@@ -20,7 +20,7 @@ function setCookie(name,value,days) {
 
   function deleteCookie(name) { setCookie(name, '', -1); }
 
-let productid = getCookie('product_choose');
+const productid = getCookie('product_choose');
 
 fetch("http://localhost:3000/api/teddies/"+ productid)
   .then(function(res) {
