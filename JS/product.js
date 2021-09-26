@@ -39,8 +39,8 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     let newImg = document.createElement("img"); 
     newImg.id = 'productImg'; 
     newImg.classList.add("img-fluid","rounded-start");
-    newImg.style.maxHeight = "330px";
-    newImg.style.minHeight = "330px";
+    newImg.style.maxHeight = "380px";
+    newImg.style.minHeight = "380px";
     newImg.src=(value.imageUrl);
     document.getElementById("productCol").appendChild(newImg);
 
