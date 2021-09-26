@@ -50,7 +50,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     document.getElementById("productDescription").appendChild(newCol2); 
     
     let newBody = document.createElement("div"); 
-    newBody.id = 'productBody'+i; 
+    newBody.id = 'productBody'; 
     newBody.classList.add("card-body");
     document.getElementById("productCol2").appendChild(newBody); 
 
