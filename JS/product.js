@@ -75,25 +75,25 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     newRates.classList.add("fas fa-star","result__note");
     document.getElementById("productCol2").appendChild(newRates);   
 
-    let newRates = document.createElement("i"); 
-    newRates.id = 'productRates2'; 
-    newRates.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates);  
+    let newRates2 = document.createElement("i"); 
+    newRates2.id = 'productRates2'; 
+    newRates2.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates2);  
 
-    let newRates = document.createElement("i"); 
-    newRates.id = 'productRates3'; 
-    newRates.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates);  
+    let newRates3 = document.createElement("i"); 
+    newRates3.id = 'productRates3'; 
+    newRates3.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates3);  
 
-    let newRates = document.createElement("i"); 
-    newRates.id = 'productRates4'; 
-    newRates.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates);  
+    let newRates4 = document.createElement("i"); 
+    newRates4.id = 'productRates4'; 
+    newRates4.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates4);  
 
-    let newRates = document.createElement("i"); 
-    newRates.id = 'productRates5'; 
-    newRates.classList.add("fas fa-star","result__note--grey");
-    document.getElementById("productCol2").appendChild(newRates);  
+    let newRates5 = document.createElement("i"); 
+    newRates5.id = 'productRates5'; 
+    newRates5.classList.add("fas fa-star","result__note--grey");
+    document.getElementById("productCol2").appendChild(newRates5);  
   })
   .catch(function(err) {
     // Une erreur est survenue
