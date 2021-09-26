@@ -54,46 +54,21 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newH5 = document.createElement("h5"); 
     newH5.id = 'productTitle'; 
-    newH5.classList.add("card-title");
+    newH5.classList.add("card-title","text-uppercase");
     newH5.textContent = (value.name);
     document.getElementById("productCol2").appendChild(newH5);
 
     let newDescription = document.createElement("p"); 
     newDescription.id = 'productDescription'; 
-    newDescription.classList.add("card-text","pb-3");
+    newDescription.classList.add("card-text","pb-3","text-center");
     newDescription.textContent = (value.description);
     document.getElementById("productCol2").appendChild(newDescription);   
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
-    newPrice.classList.add("card-text","text-right");
+    newPrice.classList.add("card-text","text-right","font-weight-bold","ml-1");
     newPrice.textContent = (value.price);
     document.getElementById("productCol2").appendChild(newPrice);   
-
-    let newRates = document.createElement("i"); 
-    newRates.id = 'productRates'; 
-    newRates.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates);   
-
-    let newRates2 = document.createElement("i"); 
-    newRates2.id = 'productRates2'; 
-    newRates2.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates2);  
-
-    let newRates3 = document.createElement("i"); 
-    newRates3.id = 'productRates3'; 
-    newRates3.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates3);  
-
-    let newRates4 = document.createElement("i"); 
-    newRates4.id = 'productRates4'; 
-    newRates4.classList.add("fas fa-star","result__note");
-    document.getElementById("productCol2").appendChild(newRates4);  
-
-    let newRates5 = document.createElement("i"); 
-    newRates5.id = 'productRates5'; 
-    newRates5.classList.add("fas fa-star","result__note--grey");
-    document.getElementById("productCol2").appendChild(newRates5);  
   })
   .catch(function(err) {
     // Une erreur est survenue
