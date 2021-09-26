@@ -39,8 +39,6 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     let newImg = document.createElement("img"); 
     newImg.id = 'productImg'; 
     newImg.classList.add("img-fluid","rounded-start");
-    newImg.style.maxHeight = "380px";
-    newImg.style.minHeight = "380px";
     newImg.src=(value.imageUrl);
     document.getElementById("productCol").appendChild(newImg);
 
@@ -66,7 +64,36 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     newDescription.textContent = (value.description);
     document.getElementById("productCol2").appendChild(newDescription);   
 
-    
+    let newPrice = document.createElement("p"); 
+    newPrice.id = 'productPrice'; 
+    newPrice.classList.add("card-text","text-right");
+    newPrice.textContent = (value.price);
+    document.getElementById("productCol2").appendChild(newPrice);   
+
+    let newRates = document.createElement("i"); 
+    newRates.id = 'productRates'; 
+    newRates.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates);   
+
+    let newRates = document.createElement("i"); 
+    newRates.id = 'productRates2'; 
+    newRates.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates);  
+
+    let newRates = document.createElement("i"); 
+    newRates.id = 'productRates3'; 
+    newRates.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates);  
+
+    let newRates = document.createElement("i"); 
+    newRates.id = 'productRates4'; 
+    newRates.classList.add("fas fa-star","result__note");
+    document.getElementById("productCol2").appendChild(newRates);  
+
+    let newRates = document.createElement("i"); 
+    newRates.id = 'productRates5'; 
+    newRates.classList.add("fas fa-star","result__note--grey");
+    document.getElementById("productCol2").appendChild(newRates);  
   })
   .catch(function(err) {
     // Une erreur est survenue
