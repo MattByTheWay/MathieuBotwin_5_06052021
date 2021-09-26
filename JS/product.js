@@ -66,18 +66,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     newDescription.textContent = (value.description);
     document.getElementById("productCol2").appendChild(newDescription);   
 
-    // let newButton = document.createElement("button"); 
-    // newButton.type = "button";
-    // newButton.id = "buttonid"+i; 
-    // newButton.classList.add("btn", "btn-primary");
-    //   newButton.textContent = "En savoir plus >";
-    //   document.getElementById("productBody"+i).appendChild(newButton);    
-    //   console.log('Element créer');
-    //   const buttonClick = document.getElementById("buttonid"+i);   
-    //   buttonClick.addEventListener('click', function() {  
-    //     setCookie('product_choose',value[i]._id,7);
-    //     window.location.href = 'product.html';
-    });
+    
   })
   .catch(function(err) {
     // Une erreur est survenue
