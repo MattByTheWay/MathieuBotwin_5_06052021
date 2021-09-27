@@ -60,7 +60,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newDescription = document.createElement("p"); 
     newDescription.id = 'productDescription'; 
-    newDescription.classList.add("card-text","pb-3","text-center");
+    newDescription.classList.add("card-text","pb-3");
     newDescription.textContent = (value.description);
     document.getElementById("productCol2").appendChild(newDescription);   
 
