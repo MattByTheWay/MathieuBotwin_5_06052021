@@ -66,14 +66,14 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
-    newPrice.classList.add("card-text","text-right","font-weight-bold","ml-1");
-    newPrice.textContent = (value.price);
+    newPrice.classList.add("card-text","text-right","font-weight-bold","pl-2");
+    newPrice.textContent = (value.price+"€");
     document.getElementById("productCol2").appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
     newButton.type = "button";
     newButton.id = "buttonid"; 
-    newButton.classList.add("btn", "btn-primary");
+    newButton.classList.add("btn", "btn-primary","pb-3");
     newButton.textContent = "Ajouter au Panier";
     document.getElementById("productCol2").appendChild(newButton);    
   })
