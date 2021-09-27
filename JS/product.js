@@ -66,7 +66,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
-    newPrice.classList.add("card-text","text-right","font-weight-bold","pl-2");
+    newPrice.classList.add("card-text","text-right","font-weight-bold");
     newPrice.textContent = (value.price+"€");
     document.getElementById("productCol2").appendChild(newPrice);   
 
