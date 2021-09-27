@@ -44,38 +44,38 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newCol2 = document.createElement("div"); 
     newCol2.id = 'productCol2'; 
-    newCol2.classList.add("col-md-8","pb-2");
+    newCol2.classList.add("col-md-8");
     document.getElementById("productDescription").appendChild(newCol2); 
     
     let newBody = document.createElement("div"); 
     newBody.id = 'productBody'; 
     newBody.classList.add("card-body");
-    document.getElementById("productCol").appendChild(newBody); 
+    document.getElementById("productCol2").appendChild(newBody); 
 
     let newH5 = document.createElement("h5"); 
     newH5.id = 'productTitle'; 
     newH5.classList.add("card-title","text-uppercase");
     newH5.textContent = (value.name);
-    document.getElementById("productCol").appendChild(newH5);
+    document.getElementById("productCol2").appendChild(newH5);
 
     let newDescription = document.createElement("p"); 
     newDescription.id = 'productDescription'; 
     newDescription.classList.add("card-text","pb-3");
     newDescription.textContent = (value.description);
-    document.getElementById("productCol").appendChild(newDescription);   
+    document.getElementById("productCol2").appendChild(newDescription);   
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
     newPrice.classList.add("card-text","text-right","font-weight-bold");
     newPrice.textContent = (value.price+"€");
-    document.getElementById("productCol").appendChild(newPrice);   
+    document.getElementById("productCol2").appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
     newButton.type = "button";
     newButton.id = "buttonid"; 
     newButton.classList.add("btn", "btn-primary");
     newButton.textContent = "Ajouter au Panier";
-    document.getElementById("productCol").appendChild(newButton);    
+    document.getElementById("productCol2").appendChild(newButton);    
   })
   .catch(function(err) {
     // Une erreur est survenue
