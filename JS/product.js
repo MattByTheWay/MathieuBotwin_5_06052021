@@ -73,7 +73,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     let newButton = document.createElement("button"); 
     newButton.type = "button";
     newButton.id = "buttonid"; 
-    newButton.classList.add("btn", "btn-primary","pb-3");
+    newButton.classList.add("btn", "btn-primary");
     newButton.textContent = "Ajouter au Panier";
     document.getElementById("productCol2").appendChild(newButton);    
   })
