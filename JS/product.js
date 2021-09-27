@@ -44,7 +44,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
 
     let newCol2 = document.createElement("div"); 
     newCol2.id = 'productCol2'; 
-    newCol2.classList.add("col-md-8");
+    newCol2.classList.add("col-md-8","pb-2");
     document.getElementById("productDescription").appendChild(newCol2); 
     
     let newBody = document.createElement("div"); 
