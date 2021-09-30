@@ -10,7 +10,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let newImg = document.createElement("img"); 
     newImg.id = 'productImg'+i; 
     newImg.classList.add("img-fluid","rounded-start");
-    newImg.src=(shoppingBasket.imageUrl);
+    newImg.src=((shoppingBasket+i).imageUrl);
     document.getElementById("productCol"+i).appendChild(newImg);
 
     let newCol2 = document.createElement("div"); 
