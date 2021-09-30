@@ -25,7 +25,7 @@ function setCookie(name,value,days) {
 
   const productid = params.get("product");
 
-  let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
+  let shoppingBasket = [JSON.parse(getCookie('shoppingBasket'))];
 
   if (shoppingBasket=Array) {
     console.log(shoppingBasket); }
