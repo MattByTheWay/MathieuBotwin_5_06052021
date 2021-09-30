@@ -20,7 +20,22 @@ function setCookie(name,value,days) {
 
   function deleteCookie(name) { setCookie(name, '', -1); }
 
-const productid = getCookie('product_choose');
+
+  const params = new URLSearchParams(window.location.search);
+
+  const productid = params.get("product");
+
+  let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
+
+  if (shoppingBasket=Array) {
+    console.log(shoppingBasket); }
+  else {
+  let shoppingBasket = [];
+  }
+  
+  
+
+
 
 fetch("http://localhost:3000/api/teddies/"+ productid)
   .then(function(res) {
@@ -29,7 +44,6 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     }
   })
   .then(function(value) {
-    console.log(value);
 
     let newCol = document.createElement("div"); 
     newCol.id = 'productCol'; 
@@ -56,26 +70,33 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     newH5.id = 'productTitle'; 
     newH5.classList.add("card-title","text-uppercase");
     newH5.textContent = (value.name);
-    document.getElementById("productCol2").appendChild(newH5);
+    document.getElementById("productBody").appendChild(newH5);
 
     let newDescription = document.createElement("p"); 
     newDescription.id = 'productDescription'; 
     newDescription.classList.add("card-text","pb-3");
     newDescription.textContent = (value.description);
-    document.getElementById("productCol2").appendChild(newDescription);   
+    document.getElementById("productBody").appendChild(newDescription);   
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
-    newPrice.classList.add("card-text","text-right","font-weight-bold","pl-2");
+    newPrice.classList.add("card-text","text-right","font-weight-bold");
     newPrice.textContent = (value.price+"€");
-    document.getElementById("productCol2").appendChild(newPrice);   
+    document.getElementById("productBody").appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
     newButton.type = "button";
     newButton.id = "buttonid"; 
-    newButton.classList.add("btn", "btn-primary","pb-3");
+    newButton.classList.add("btn", "btn-primary");
     newButton.textContent = "Ajouter au Panier";
-    document.getElementById("productCol2").appendChild(newButton);    
+    document.getElementById("productBody").appendChild(newButton);    
+    let buttonClick = document.getElementById("buttonid");   
+      buttonClick.addEventListener('click', function() {  
+        shoppingBasket.push(value);
+        newButton.textContent = "  Ajouté !  ";
+        setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
+         let buttonClick = document.getElementById("buttonoff");  
+      });
   })
   .catch(function(err) {
     // Une erreur est survenue
