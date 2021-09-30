@@ -25,13 +25,14 @@ function setCookie(name,value,days) {
 
   const productid = params.get("product");
 
-  let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
+  let cookieBasket = JSON.parse(getCookie('shoppingBasket'));
+  let shoppingBasket = [];
 
-  if (shoppingBasket=Array) {
-    console.log(shoppingBasket); }
-  else {
-    shoppingBasket = [];
+  if (cookieBasket==Array) {
+    shoppingBasket = cookieBasket; 
+    console.log('ok');
   }
+ 
   
   
   
