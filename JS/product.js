@@ -25,7 +25,7 @@ function setCookie(name,value,days) {
 
   const productid = params.get("product");
 
-  let shoppingBasket = [JSON.parse(getCookie('shoppingBasket'))];
+  let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 
   if (shoppingBasket=Array) {
     console.log(shoppingBasket); }
@@ -92,6 +92,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     document.getElementById("productBody").appendChild(newButton);    
     let buttonClick = document.getElementById("buttonid");   
       buttonClick.addEventListener('click', function() {  
+        let shoppingBasket = [];
         shoppingBasket.push(value);
         newButton.textContent = "  Ajouté !  ";
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
