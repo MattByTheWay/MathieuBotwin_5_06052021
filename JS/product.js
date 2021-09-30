@@ -27,8 +27,9 @@ function setCookie(name,value,days) {
 
   let cookieBasket = JSON.parse(getCookie('shoppingBasket'));
   let shoppingBasket = [];
+  console.log(cookieBasket);
 
-  if (cookieBasket==Array) {
+  if (cookieBasket && cookieBasket.length > 0) {
     shoppingBasket = cookieBasket; 
     console.log('ok');
   }
