@@ -46,7 +46,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let newButton = document.createElement("button"); 
     newButton.type = "button";
     newButton.id = "buttonid"+i; 
-    newButton.classList.add("btn", "btn-primary");
+    newButton.classList.add("btn", "btn-danger");
     newButton.textContent = "Supprimer le produit";
     document.getElementById("productBody"+i).appendChild(newButton);  
 
