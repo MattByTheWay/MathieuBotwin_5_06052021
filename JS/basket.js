@@ -10,8 +10,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let newImg = document.createElement("img"); 
     newImg.id = 'productImg'+i; 
     newImg.classList.add("img-fluid","rounded-start");
-    newImg.src=(shoppingBasket.imageUrl);
-    console.log=(shoppingBasket.imageUrl);
+    newImg.src=(shoppingBasket[i].imageUrl);
+    console.log=(shoppingBasket[i].imageUrl);
     document.getElementById("productCol"+i).appendChild(newImg);
 
     let newCol2 = document.createElement("div"); 
@@ -27,20 +27,20 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let newH5 = document.createElement("h5"); 
     newH5.id = 'productTitle'+i; 
     newH5.classList.add("card-title","text-uppercase");
-    newH5.textContent = (shoppingBasket.name);
+    newH5.textContent = (shoppingBasket[i].name);
     document.getElementById("productBody"+i).appendChild(newH5);
 
     let newDescription = document.createElement("p"); 
     newDescription.id = 'productDescription'+i; 
     newDescription.classList.add("card-text","pb-3");
-    newDescription.textContent = (shoppingBasket.description);
+    newDescription.textContent = (shoppingBasket[i].description);
     document.getElementById("productBody"+i).appendChild(newDescription);   
 
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'+i; 
     newPrice.classList.add("card-text","text-right","font-weight-bold");
-    newPrice.textContent = (shoppingBasket.price+"€");
-    totalBasket + shoppingBasket.price;
+    newPrice.textContent = (shoppingBasket[i].price+"€");
+    totalBasket + shoppingBasket[i].price;
     document.getElementById("productBody"+i).appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
