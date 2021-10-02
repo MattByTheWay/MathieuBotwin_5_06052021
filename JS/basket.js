@@ -39,7 +39,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     newPrice.id = 'productPrice'+i; 
     newPrice.classList.add("card-text","text-right","font-weight-bold");
     newPrice.textContent = (shoppingBasket[i].price+"€");
-    totalBasket + shoppingBasket[i].price;
+    totalBasket = totalBasket + shoppingBasket[i].price;
     document.getElementById("productBody"+i).appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
