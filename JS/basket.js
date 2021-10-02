@@ -49,6 +49,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     newButton.classList.add("btn", "btn-danger");
     newButton.textContent = "Supprimer le produit";
     document.getElementById("productBody"+i).appendChild(newButton);  
+    console.log(shoppingBasket);
     let buttonClick = document.getElementById("buttonid"+i);   
       buttonClick.addEventListener('click', function() {  
         console.log(shoppingBasket);
