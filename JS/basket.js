@@ -55,7 +55,6 @@ for (let i = 0; i < shoppingBasket.length; i++) {
         totalBasket = totalBasket - productprice;
         document.getElementById("productCol"+i).innerHTML = '';
         document.getElementById("productCol2"+i).innerHTML = '';
-        deleteCookie('shoppingBasket');
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
         console.log(shoppingBasket);
     });
