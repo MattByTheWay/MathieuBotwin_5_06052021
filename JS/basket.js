@@ -41,6 +41,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     newPrice.textContent = (shoppingBasket[i].price+"€");
     let productprice = shoppingBasket[i].price;
     totalBasket = totalBasket + productprice;
+    let totalBasketprice = document.getElementById("totalBasket");  
+    totalBasketprice.textContent = (totalBasket);
     document.getElementById("productBody"+i).appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
