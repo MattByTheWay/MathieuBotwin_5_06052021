@@ -16,7 +16,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let newCol2 = document.createElement("div"); 
     newCol2.id = 'productCol2'+i; 
     newCol2.classList.add("col-md-8");
-    document.getElementById("productDescription").appendChild(newCol2); 
+    document.getElementById("productCol"+i).appendChild(newCol2); 
     
     let newBody = document.createElement("div"); 
     newBody.id = 'productBody'+i; 
