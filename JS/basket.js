@@ -39,7 +39,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     newPrice.id = 'productPrice'+i; 
     newPrice.classList.add("card-text","text-right","font-weight-bold");
     newPrice.textContent = (shoppingBasket[i].price+"€");
-    totalBasket = totalBasket + shoppingBasket[i].price;
+    let productprice = shoppingBasket[i].price;
+    totalBasket = totalBasket + productprice;
     document.getElementById("productBody"+i).appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
@@ -51,7 +52,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let buttonClick = document.getElementById("buttonid"+i);   
     buttonClick.addEventListener('click', function() {  
         delete shoppingBasket[i];
-        totalBasket = totalBasket - shoppingBasket[i].price;
+        totalBasket = totalBasket - productprice;
         document.getElementById("productCol"+i).innerHTML = '';
         document.getElementById("productCol2"+i).innerHTML = '';
         console.log(shoppingBasket);
