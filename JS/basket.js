@@ -51,7 +51,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     document.getElementById("productBody"+i).appendChild(newButton);  
     let buttonClick = document.getElementById("buttonid"+i);   
       buttonClick.addEventListener('click', function() {  
-        shoppingBasket.splice(i,1);
+        shoppingBasket.splice(i,i);
+        console.log(shoppingBasket);
        
       });
 
