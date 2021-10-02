@@ -51,14 +51,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let buttonClick = document.getElementById("buttonid"+i);   
     buttonClick.addEventListener('click', function() {  
         delete shoppingBasket[i];
-        document.getElementById("productCol"+i).remove();
-        document.getElementById("productImg"+i).remove();
-        document.getElementById("productCol2"+i).remove();
-        document.getElementById("productBody"+i).remove();
-        document.getElementById("productTitle"+i).remove();
-        document.getElementById("productDescription"+i).remove();
-        document.getElementById("productPrice"+i).remove();
-        document.getElementById("buttonid"+i).remove();
+        document.getElementById("productCol"+i).innerHTML('');
         console.log(shoppingBasket);
     });
 
