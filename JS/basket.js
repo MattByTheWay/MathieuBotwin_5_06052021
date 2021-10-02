@@ -42,7 +42,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     let productprice = shoppingBasket[i].price;
     totalBasket = totalBasket + productprice;
     let totalBasketprice = document.getElementById("totalBasket");  
-    totalBasketprice.textContent = ("Prix Total :"+ totalBasket);
+    totalBasketprice.textContent = ("Prix Total :"+ totalBasket +"€");
     document.getElementById("productBody"+i).appendChild(newPrice);   
 
     let newButton = document.createElement("button"); 
@@ -55,7 +55,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     buttonClick.addEventListener('click', function() {  
         shoppingBasket.splice(i,1);
         totalBasket = totalBasket - productprice;
-        totalBasketprice.textContent = ("Prix Total :"+ totalBasket);
+        totalBasketprice.textContent = ("Prix Total :"+ totalBasket +"€");
         document.getElementById("productCol"+i).innerHTML = '';
         document.getElementById("productCol2"+i).innerHTML = '';
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
