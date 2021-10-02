@@ -12,10 +12,12 @@ fetch("http://localhost:3000/api/teddies")
       newCol.id = 'productCol'+i; 
       newCol.classList.add("col-4","pb-3");
       document.getElementById("productContent").appendChild(newCol); 
+
       let newCard = document.createElement("div"); 
       newCard.id = 'productCard'+i; 
       newCard.classList.add("card","cardhover","border","border-4","rounded","productCol");
       document.getElementById("productCol"+i).appendChild(newCard); 
+
       let newImg = document.createElement("img"); 
       newImg.id = 'productImg'+i; 
       newImg.classList.add("card-img-top");
@@ -23,15 +25,18 @@ fetch("http://localhost:3000/api/teddies")
       newImg.style.minHeight = "230px";
       newImg.src=(value[i].imageUrl);
       document.getElementById("productCard"+i).appendChild(newImg);
+
       let newBody = document.createElement("div"); 
       newBody.id = 'productBody'+i; 
       newBody.classList.add("card-body");
       document.getElementById("productCard"+i).appendChild(newBody); 
+
       let newH2 = document.createElement("h2"); 
       newH2.id = 'productTitle'+i; 
       newH2.classList.add("card-text");
       newH2.textContent = (value[i].name);
       document.getElementById("productBody"+i).appendChild(newH2);
+      
       let newDescription = document.createElement("p"); 
       newDescription.id = 'productDescription'+i; 
       newDescription.classList.add("card-text");
