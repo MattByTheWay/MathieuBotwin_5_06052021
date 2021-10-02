@@ -51,7 +51,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     document.getElementById("productBody"+i).appendChild(newButton);  
     let buttonClick = document.getElementById("buttonid"+i);   
     buttonClick.addEventListener('click', function() {  
-        delete shoppingBasket[i];
+        shoppingBasket.splice(i,1);
         totalBasket = totalBasket - productprice;
         document.getElementById("productCol"+i).innerHTML = '';
         document.getElementById("productCol2"+i).innerHTML = '';
