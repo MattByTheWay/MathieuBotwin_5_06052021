@@ -51,7 +51,6 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     document.getElementById("productBody"+i).appendChild(newButton);  
     let buttonClick = document.getElementById("buttonid"+i);   
       buttonClick.addEventListener('click', function() {  
-        delete shoppingBasket[i];
         console.log(shoppingBasket);
        
       });
