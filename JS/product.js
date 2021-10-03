@@ -56,6 +56,17 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     newDescription.textContent = (value.description);
     document.getElementById("productBody").appendChild(newDescription);   
 
+    let newCustom = document.createElement("div");
+    newCustom.id = 'newCustom'
+    document.getElementById("productBody").appendChild(newCustom);   
+    document.getElementById("newCustom").innerHTML='<div class="form-group col-md-4"><label for="inputState">Personnalise ton Ourson !</label><select  id="optionColor" class="form-control"><option selected>Choisir une Couleur...</option></select></div>';
+    
+    for (let i = 0; i < (value.colors).length; i++) {
+    let newColor = document.createElement("option");
+    newColor.textContent= (value.colors[i]);
+    document.getElementById('optionColor').appendChild(newColor);
+    }
+
     let newPrice = document.createElement("p"); 
     newPrice.id = 'productPrice'; 
     newPrice.classList.add("card-text","text-right","font-weight-bold");
