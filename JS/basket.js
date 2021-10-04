@@ -78,7 +78,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
 
 
 
-  function validateText(form) {
+  function validateText(event,form) {
+    event.preventDefault();
     let reText = /^[a-z ,.'-]+$/i;
     let reNumber = /^[0-9]{4,5}$/i;
   
