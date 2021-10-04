@@ -105,8 +105,8 @@ class contact  {
     let newContact = new contact (newfirstName,newlastName,newAddress,newCity,newEmail);
     console.log(newContact);
 
-    submitJSON = JSON.stringify(newContact+shoppingBasket);
-    console.log(submitJSON);
+    let submitJSON = JSON.stringify(newContact);
+    let basketIfy = JSON.stringify(shoppingBasket);
     
     fetch("http://localhost:3000/api/teddies/order", {
         method: 'POST',
