@@ -19,3 +19,31 @@ function setCookie(name,value,days) {
   }
 
   function deleteCookie(name) { setCookie(name, '', -1); }
+
+
+  function validateText(form) {
+    let reText = /^[a-zA-Z]+\s?-?$/i;
+    let reNumber = /^[0-9]{4,5}$/i;
+    let reAdress = /[0-9]{1,3}(?:(?:[,.']){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)*/i;
+  
+    if (!reText.test(form.inputlastName.value)) {
+      alert('Les chiffres ne sont pas autorisé pour le Nom de Famille');
+      return false;
+    }
+    if (!reText.test(form.inputfirstName.value)) {
+      alert('Les chiffres ne sont pas autorisé pour le Prénom');
+      return false;
+    }
+    if (!reText.test(form.inputCity.value)) {
+      alert('Veuillez ne pas utiliser de chiffres pour la ville');
+      return false;
+    }
+    if (!reNumber.test(form.inputZip.value)) {
+      alert("Le Code Postal n'est pas valide (entre 4 et 5 chiffres)");
+      return false;
+    }
+    if (!reAdress.test(form.inputAddress.value)) {
+      alert("L'adresse fournie à une erreur de syntaxe");
+      return false;
+    }
+  }

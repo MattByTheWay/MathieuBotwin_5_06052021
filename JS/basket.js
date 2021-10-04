@@ -72,7 +72,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
         }
         };
     let newContact = new Contact ();
-    
+
+
     fetch("http://localhost:3000/api/teddies/order", {
         method: 'POST',
         headers: { 

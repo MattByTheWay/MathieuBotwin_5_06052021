@@ -44,23 +44,23 @@
               <h1 id=totalBasket></h1>
             </div>
 
-            <form>
+            <form onsubmit="return validateText(this);">
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputlastName4">Nom</label>
-                    <input type="text" required="required" class="form-control" id="inputlastName4" placeholder="Doe">
+                    <label for="inputlastName">Nom</label>
+                    <input type="text" required="required" name="inputlastName" class="form-control" id="inputlastName" placeholder="Doe">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputfirstName4">Prénom</label>
-                    <input type="text" required="required" class="form-control" id="inputfirstName4" placeholder="John">
+                    <label for="inputfirstName">Prénom</label>
+                    <input type="text" required="required" class="form-control" id="inputfirstName" placeholder="John">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Adresse E-mail</label>
-                  <input type="email" required="required" class="form-control" id="inputEmail4" placeholder="Adresse Email">
+                  <label for="inputEmail">Adresse E-mail</label>
+                  <input type="email" required="required" class="form-control" id="inputEmail" placeholder="Adresse Email">
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Adresse</label>
+                  <label for="inputAddress">Adresse</label>
                   <input type="text" required="required" class="form-control" id="inputAddress" placeholder="123 Rue Principale">
                 </div>
                 <div class="form-row">
