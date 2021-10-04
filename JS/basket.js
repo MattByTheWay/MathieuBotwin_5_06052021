@@ -114,7 +114,8 @@ class contact  {
         'Accept': 'application/json', 
         'Content-Type': 'application/json' 
         },
-        body: submitJSON   
+        body: JSON.stringify(newContact) +
+              JSON.stringify(shoppingBasket)   
     })
     .then(function(res) {
         if (res.ok) {
