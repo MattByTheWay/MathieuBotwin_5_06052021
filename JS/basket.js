@@ -76,7 +76,6 @@ class contact  {
     };
 
   function validateText(form) {
-    form.preventDefault();
     let reText = /^[a-z ,.'-]+$/i;
     let reNumber = /^[0-9]{4,5}$/i;
   
