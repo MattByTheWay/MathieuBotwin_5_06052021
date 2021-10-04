@@ -65,11 +65,11 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     
 }
 
-class Contact  {
-    constructor(firstName, lastName, adress, city, email) {   
+class contact  {
+    constructor(firstName, lastName, address, city, email) {   
     this.firstName = firstName;
     this.lastName = lastName;
-    this.adress = adress;
+    this.address = address;
     this.city = city;
     this.email = email;
     }
@@ -98,11 +98,11 @@ class Contact  {
 
     let newfirstName = form.inputfirstName.value;
     let newlastName = form.inputlastName.value;
-    let newAdress = form.inputAddress.value;
+    let newAddress = form.inputAddress.value;
     let newCity = form.inputCity.value;
     let newEmail = form.inputEmail.value;
 
-    let newContact = new Contact (newfirstName,newlastName,newAdress,newCity,newEmail);
+    let newContact = new contact (newfirstName,newlastName,newAddress,newCity,newEmail);
     console.log(newContact);
     
     fetch("http://localhost:3000/api/teddies/order", {
