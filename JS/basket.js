@@ -1,5 +1,16 @@
+class contact  {
+    constructor(firstName, lastName, address, city, email) {   
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.city = city;
+    this.email = email;
+    }
+    };
+
 let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
+
 for (let i = 0; i < shoppingBasket.length; i++) {
  
     let newCol = document.createElement("div"); 
@@ -65,15 +76,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
     
 }
 
-class contact  {
-    constructor(firstName, lastName, address, city, email) {   
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.address = address;
-    this.city = city;
-    this.email = email;
-    }
-    };
+
 
   function validateText(form) {
     let reText = /^[a-z ,.'-]+$/i;
@@ -105,8 +108,10 @@ class contact  {
     let newContact = new contact (newfirstName,newlastName,newAddress,newCity,newEmail);
     console.log(newContact);
 
-    let submitJSON =JSON.stringify(newContact);
-    let basketIfy = JSON.stringify(shoppingBasket);
+    let payload = {
+        "contact": newContact,
+	    "products": shoppingBasket
+    }
     
     fetch("http://localhost:3000/api/teddies/order", {
         method: 'POST',
@@ -114,7 +119,7 @@ class contact  {
         'Accept': 'application/json', 
         'Content-Type': 'application/json' 
         },
-        body: submitJSON + basketIfy   
+        body: JSON.stringify(payload)  
     })
     .then(function(res) {
         if (res.ok) {
