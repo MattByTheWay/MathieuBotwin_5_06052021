@@ -20,25 +20,3 @@ function setCookie(name,value,days) {
 
   function deleteCookie(name) { setCookie(name, '', -1); }
 
-
-  function validateText(form) {
-    let reText = /^[a-z ,.'-]+$/i;
-    let reNumber = /^[0-9]{4,5}$/i;
-  
-    if (!reText.test(form.inputlastName.value)) {
-      alert('Les chiffres ne sont pas autorisé pour le Nom de Famille');
-      return false;
-    }
-    if (!reText.test(form.inputfirstName.value)) {
-      alert('Les chiffres ne sont pas autorisé pour le Prénom');
-      return false;
-    }
-    if (!reText.test(form.inputCity.value)) {
-      alert('Veuillez ne pas utiliser de chiffres pour la ville');
-      return false;
-    }
-    if (!reNumber.test(form.inputZip.value)) {
-      alert("Le Code Postal n'est pas valide (entre 4 et 5 chiffres)");
-      return false;
-    }
-  }
