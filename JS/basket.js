@@ -112,5 +112,14 @@ class Contact  {
         'Content-Type': 'application/json' 
         },
         body: JSON.stringify(shoppingBasket+newContact)   
+    })
+    .then(function(res) {
+        if (res.ok) {
+        console.log(res);
+          return res.json();
+        }
+      })
+      .then(function(value) {
+        console.log(value);
     });
   }
