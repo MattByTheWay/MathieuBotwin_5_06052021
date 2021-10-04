@@ -62,4 +62,23 @@ for (let i = 0; i < shoppingBasket.length; i++) {
         console.log(shoppingBasket);
     });
 
+    class Contact  {
+        constructor(firstName, lastName, adress, city, email) {   
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.adress = adress;
+        this.city = city;
+        this.email = email;
+        }
+        };
+    let newContact = new Contact ();
+    
+    fetch("http://localhost:3000/api/teddies/order", {
+        method: 'POST',
+        headers: { 
+        'Accept': 'application/json', 
+        'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(shoppingBasket+newContact)   
+    });
 }
