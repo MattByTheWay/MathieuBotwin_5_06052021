@@ -10,8 +10,11 @@ class contact  {
 
 let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
+let productID = []
 
 for (let i = 0; i < shoppingBasket.length; i++) {
+
+  productID.push[shoppingBasket[i]._id];
 
   let newCol = document.createElement("div"); 
   newCol.id = 'productCol'+i; 
@@ -111,7 +114,7 @@ function validateText(event,form) {
 
   let payload = {
       "contact": newContact,
-    "products": shoppingBasket
+    "products": productID
   }
   
   fetch("http://localhost:3000/api/teddies/order", {
