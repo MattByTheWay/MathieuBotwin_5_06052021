@@ -14,7 +14,7 @@ let productID = []
 
 for (let i = 0; i < shoppingBasket.length; i++) {
 
-  productID.push[shoppingBasket[i]._id];
+  productID.push(shoppingBasket[i]._id);
 
   let newCol = document.createElement("div"); 
   newCol.id = 'productCol'+i; 
