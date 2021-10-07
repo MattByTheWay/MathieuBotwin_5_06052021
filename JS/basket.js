@@ -18,8 +18,8 @@ for (let i = 0; i < shoppingBasket.length; i++) {
       return res.json();
     }
   })
-  .then(function(value) {
-    console.log(value);
+  .then(function(valuee) {
+    console.log(valuee);
     let newCol = document.createElement("div"); 
     newCol.id = 'productCol'+i; 
     newCol.classList.add("col-md-4");
