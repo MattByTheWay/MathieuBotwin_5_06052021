@@ -81,7 +81,7 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
     document.getElementById("productBody").appendChild(newButton);    
     let buttonClick = document.getElementById("buttonid");   
       buttonClick.addEventListener('click', function() {  
-        shoppingBasket.push(value._id);
+        shoppingBasket.push(value);
         newButton.textContent = "  Ajouté !  ";
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
          let buttonClick = document.getElementById("buttonoff");  

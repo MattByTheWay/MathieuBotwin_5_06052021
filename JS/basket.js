@@ -10,17 +10,12 @@ class contact  {
 
 let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
+let productID = []
 
-// for (let i = 0; i < shoppingBasket.length; i++) {
-  fetch("http://localhost:3000/api/teddies/"+ shoppingBasket)
-  .then(function(res) {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .then(function(valuee) {
-    console.log(valuee);
-    for (let i = 0; i < shoppingBasket.length; i++) {
+for (let i = 0; i < shoppingBasket.length; i++) {
+
+    productID.push[shoppingBasket[i]._id];
+ 
     let newCol = document.createElement("div"); 
     newCol.id = 'productCol'+i; 
     newCol.classList.add("col-md-4");
@@ -80,13 +75,9 @@ let totalBasket = 0;
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
         console.log(shoppingBasket);
     });
-  }
-  })
-  .catch(function(err) {
-    // Une erreur est survenue
-  });
-    
 
+    
+}
 
 
 
@@ -123,7 +114,7 @@ let totalBasket = 0;
 
     let payload = {
         "contact": newContact,
-	    "products": shoppingBasket
+	    "products": productID
     }
     
     fetch("http://localhost:3000/api/teddies/order", {
