@@ -12,7 +12,14 @@ let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
 
 for (let i = 0; i < shoppingBasket.length; i++) {
- 
+  fetch("http://localhost:3000/api/teddies/"+ productid)
+  .then(function(res) {
+    if (res.ok) {
+      return res.json();
+    }
+  })
+  .then(function(value) {
+    console.log(value);
     let newCol = document.createElement("div"); 
     newCol.id = 'productCol'+i; 
     newCol.classList.add("col-md-4");
@@ -72,7 +79,10 @@ for (let i = 0; i < shoppingBasket.length; i++) {
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
         console.log(shoppingBasket);
     });
-
+  })
+  .catch(function(err) {
+    // Une erreur est survenue
+  });
     
 }
 
