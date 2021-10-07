@@ -11,7 +11,7 @@ class contact  {
 let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
 
-for (let i = 0; i < shoppingBasket.length; i++) {
+// for (let i = 0; i < shoppingBasket.length; i++) {
   fetch("http://localhost:3000/api/teddies/"+ shoppingBasket)
   .then(function(res) {
     if (res.ok) {
@@ -20,6 +20,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
   })
   .then(function(valuee) {
     console.log(valuee);
+    for (let i = 0; i < shoppingBasket.length; i++) {
     let newCol = document.createElement("div"); 
     newCol.id = 'productCol'+i; 
     newCol.classList.add("col-md-4");
@@ -79,12 +80,13 @@ for (let i = 0; i < shoppingBasket.length; i++) {
         setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
         console.log(shoppingBasket);
     });
+  }
   })
   .catch(function(err) {
     // Une erreur est survenue
   });
     
-}
+
 
 
 
