@@ -133,5 +133,9 @@ function validateText(event,form) {
     })
     .then(function(value) {
       console.log(value);
+      setCookie('orderConfirmation', JSON.stringify(value),7);
+      deleteCookie('shoppingBasket');
+      window.location.href = 'confirmation.html';
+    
   });
 }
