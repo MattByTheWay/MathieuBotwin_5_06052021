@@ -12,7 +12,7 @@ let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
 let totalBasket = 0;
 
 for (let i = 0; i < shoppingBasket.length; i++) {
-  fetch("http://localhost:3000/api/teddies/"+ productid)
+  fetch("http://localhost:3000/api/teddies/"+ shoppingBasket)
   .then(function(res) {
     if (res.ok) {
       return res.json();
