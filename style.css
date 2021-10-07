@@ -15,6 +15,9 @@ body {
 .card {
     background-color: #fff2fc;
 }
+#background {
+    background-color: #fff2fc;
+}
 .cardhover {
     
     transform: scale(1);
