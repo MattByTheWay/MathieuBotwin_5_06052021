@@ -8,7 +8,7 @@ class contact  {
   }
   };
 
-let shoppingBasket = JSON.parse(getCookie('shoppingBasket'));
+let shoppingBasket = JSON.parse(localStorage.getItem('shoppingBasket'));
 let totalBasket = 0;
 let productID = []
 
@@ -72,7 +72,7 @@ for (let i = 0; i < shoppingBasket.length; i++) {
       totalBasketprice.textContent = ("Prix Total :"+ totalBasket +"€");
       document.getElementById("productCol"+i).innerHTML = '';
       document.getElementById("productCol2"+i).innerHTML = '';
-      setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
+      localStorage.setItem('shoppingBasket',JSON.stringify(shoppingBasket));
       console.log(shoppingBasket);
   });
 
@@ -133,8 +133,8 @@ function validateText(event,form) {
     })
     .then(function(value) {
       console.log(value);
-      setCookie('orderConfirmation', JSON.stringify(value),7);
-      deleteCookie('shoppingBasket');
+      localStorage.setItem('orderConfirmation',JSON.stringify(value));
+      localStorage.removeItem('shoppingBasket');
       window.location.href = 'confirmation.html';
     
   });

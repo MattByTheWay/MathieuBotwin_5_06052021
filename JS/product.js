@@ -2,7 +2,7 @@
 
   const productid = params.get("product");
 
-  let cookieBasket = JSON.parse(getCookie('shoppingBasket'));
+  let cookieBasket = JSON.parse(localStorage.getItem('shoppingBasket'));
   let shoppingBasket = [];
 
   if (cookieBasket && cookieBasket.length > 0) {
@@ -83,7 +83,8 @@ fetch("http://localhost:3000/api/teddies/"+ productid)
       buttonClick.addEventListener('click', function() {  
         shoppingBasket.push(value);
         newButton.textContent = "  Ajouté !  ";
-        setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
+        localStorage.setItem('shoppingBasket',JSON.stringify(shoppingBasket));
+        // setCookie('shoppingBasket', JSON.stringify(shoppingBasket),7);
          let buttonClick = document.getElementById("buttonoff");  
       });
   })

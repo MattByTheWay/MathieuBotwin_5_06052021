@@ -1,4 +1,4 @@
-let confirmationOrder = JSON.parse(getCookie('orderConfirmation'));
+let confirmationOrder = JSON.parse(localStorage.getItem('orderConfirmation'));
 let totalPayout = 0;
 console.log(confirmationOrder);
 
