@@ -58,4 +58,6 @@ fetch("http://localhost:3000/api/teddies")
   })
   .catch(function(err) {
     console.log(err);
+    document.getElementById("idError").innerHTML = 'Error Local Serveur not Found' ;
+    document.getElementById("idError2").innerHTML = 'Veuillez relancer le serveur !' ;
   });
